@@ -29,6 +29,7 @@ public class MovableObjectController : MonoBehaviour
     public float snapOffset = 0.1f;
     public bool doSnap = true;
     public float freeRotationCoef = 1f;
+    public float snapRotationCoef = 1f;
 
     [HideInInspector]
     public ToolMode toolMode = ToolMode.Move;
@@ -56,7 +57,7 @@ public class MovableObjectController : MonoBehaviour
             ;
             Vector2 rotateDir = Vector2.Perpendicular(roteteDirT);
             float rotateAmount = Vector2.Dot(diff.normalized, rotateDir.normalized);
-            transform.rotation *= Quaternion.AngleAxis(rotateAmount, transform.InverseTransformDirection(_mNormal));    
+            transform.rotation *= Quaternion.AngleAxis(rotateAmount * snapRotationCoef, transform.InverseTransformDirection(_mNormal));    
             // transform.rotation *= Quaternion.Euler(0, rotateAmount, 0); 
         }
         else

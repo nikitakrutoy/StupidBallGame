@@ -23,6 +23,7 @@ public class WASDCameraController : MonoBehaviour {
      
     void Update ()
     {
+        if (Input.touchCount > 0) return;
         if (Input.GetMouseButton(1)) _bRotateCamera = true;
         else _bRotateCamera = false;
         

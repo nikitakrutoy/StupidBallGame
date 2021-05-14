@@ -59,7 +59,8 @@ public class EditPanel : MonoBehaviour
         SetMoveMode();
         SetSnap(doSnap);
         if (!allowDelete) deleteButton.interactable = false;
-        
+        else deleteButton.interactable = true;
+
     } 
     // Start is called before the first frame update
     void Start()
