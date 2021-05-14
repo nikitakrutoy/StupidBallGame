@@ -61,6 +61,7 @@ public class LevelManager : MonoBehaviour
     public void ResetSimulation()
     {
         simulationManager.ResetObjectsState();
+        stupidBall.ResetState();
         _isFailed = false;
         _isFinished = false;
     }
