@@ -6,7 +6,7 @@
             {
                 "type": "System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",
                 "key": "buildOutputDirList",
-                "value": "{\"m_Value\":\"/Users/nikitakrutoy/Unity Projects/StupidBall/StupidBall/BuildWebGL;;;;;;;;;\"}"
+                "value": "{\"m_Value\":\"/Users/nikitakrutoy/Unity Projects/StupidBall/StupidBall/Build/BuildWebGL0.3;/Users/nikitakrutoy/Unity Projects/StupidBall/StupidBall/Build/BuildWebGL0.2;/Users/nikitakrutoy/Unity Projects/StupidBall/StupidBall/BuildWebGL;;;;;;;\"}"
             },
             {
                 "type": "System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089",

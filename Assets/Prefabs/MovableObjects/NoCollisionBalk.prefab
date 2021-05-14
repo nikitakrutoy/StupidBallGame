@@ -27,7 +27,7 @@ PrefabInstance:
     - target: {fileID: 2110520849831439372, guid: 6a68bd018cd5d459ea4dcd172adf270f,
         type: 3}
       propertyPath: m_Name
-      value: Cube (1)
+      value: NoCollisionBulk
       objectReference: {fileID: 0}
     - target: {fileID: 2110520849831439408, guid: 6a68bd018cd5d459ea4dcd172adf270f,
         type: 3}
@@ -88,6 +88,11 @@ PrefabInstance:
         type: 3}
       propertyPath: detectCollisions
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2110520849831439409, guid: 6a68bd018cd5d459ea4dcd172adf270f,
+        type: 3}
+      propertyPath: movableObjectType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2110520849831439410, guid: 6a68bd018cd5d459ea4dcd172adf270f,
         type: 3}

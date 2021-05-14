@@ -94,6 +94,11 @@ PrefabInstance:
       propertyPath: detectCollisions
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2110520849831439409, guid: 6a68bd018cd5d459ea4dcd172adf270f,
+        type: 3}
+      propertyPath: movableObjectType
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2110520849831439410, guid: 6a68bd018cd5d459ea4dcd172adf270f,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -117,7 +122,7 @@ PrefabInstance:
     - target: {fileID: 2110520849831439414, guid: 6a68bd018cd5d459ea4dcd172adf270f,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2110520849831439414, guid: 6a68bd018cd5d459ea4dcd172adf270f,
         type: 3}
