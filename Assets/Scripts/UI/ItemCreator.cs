@@ -26,6 +26,7 @@ public class ItemCreator : MonoBehaviour
         
         lastCreatedObject.transform.rotation *= Quaternion.Euler(0, 90, 0);
         lastCreatedObject.GetComponent<MovableObject>().createdFromPanel = true;
+        lastCreatedObject.GetComponent<SimulationObject>().enabled = false;
         lastCreatedObject.SetActive(true);
         
     }

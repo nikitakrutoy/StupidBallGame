@@ -14,6 +14,7 @@ public class SimulationManager : MonoBehaviour
     public delegate void ResetAction();
     public static event ResetAction OnReset;
 
+    public Button RunButton;
     public Button ResumeButton;
     public Button PauseButton;
     
@@ -42,7 +43,8 @@ public class SimulationManager : MonoBehaviour
         simulationStartTime = -1;
         if (OnReset != null) OnReset();
         PauseButton.gameObject.SetActive(false);
-        ResumeButton.gameObject.SetActive(true);
+        ResumeButton.gameObject.SetActive(false);
+        RunButton.gameObject.SetActive(true);
     }
     
     // Update is called once per frame

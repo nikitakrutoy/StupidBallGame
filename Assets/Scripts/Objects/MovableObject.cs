@@ -4,6 +4,12 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [System.Serializable]
+public enum MovableObjectType
+{
+    Standard = 0,
+    NoCollision = 1,
+    Gravity = 2
+} 
 public class MovableObject : MonoBehaviour
 {
     public bool IsActive { get; private set; }
@@ -24,7 +30,7 @@ public class MovableObject : MonoBehaviour
     public Material acceptMaterial;
     public Material declineMaterial;
     public bool allowDelete = false;
-    public bool detectCollisions = true;
+    public MovableObjectType movableObjectType = MovableObjectType.Standard;
     
     public MovableObjectManager manager;
     
@@ -106,7 +112,7 @@ public class MovableObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (IsActive && detectCollisions)
+        if (IsActive && movableObjectType != MovableObjectType.NoCollision)
         {
             _renderer.material = declineMaterial;
             _bAcceptPosition = false;
@@ -116,7 +122,7 @@ public class MovableObject : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if (IsActive && detectCollisions)
+        if (IsActive && movableObjectType != MovableObjectType.NoCollision)
         {
             _collidedObjectsSet.Remove(other.gameObject);
             if (_collidedObjectsSet.Count == 0)

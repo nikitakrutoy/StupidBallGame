@@ -74,7 +74,7 @@ public class DeleteEditAction : EditAction
     public override void Cancel()
     {
         gameObject.SetActive(true);
-        button.GetComponent<ItemCreator>().Decrement();
+        button.GetComponent<ItemCreator>().DecrementAndDestroy();
     }
     
     public override void Apply()

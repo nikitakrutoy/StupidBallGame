@@ -11,6 +11,12 @@ public class SimulationObject : MonoBehaviour
     {
         _rg = GetComponent<Rigidbody>();
         _restTransform = new TransformContainer();
+        UpdateRest();
+    }
+
+    public void UpdateRest()
+    {
+        _restTransform = new TransformContainer();
         _restTransform.copyFrom(transform);
     }
 
@@ -19,6 +25,7 @@ public class SimulationObject : MonoBehaviour
         _rg.velocity = Vector3.zero;
         _velocity = Vector3.zero;
         _rg.useGravity = false;
+        _rg.isKinematic = true;
         _restTransform.copyTo(transform);
     }
     
@@ -27,12 +34,14 @@ public class SimulationObject : MonoBehaviour
         _velocity = _rg.velocity;
         _rg.velocity = Vector3.zero;
         _rg.useGravity = false;
+        _rg.isKinematic = true;
     }
 
     public void ResumeGravity()
     {
         _rg.velocity = _velocity;
         _rg.useGravity = true;
+        _rg.isKinematic = false;
     }
     
     void OnEnable()

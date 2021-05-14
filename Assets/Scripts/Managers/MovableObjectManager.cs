@@ -88,7 +88,13 @@ public class MovableObjectManager : MonoBehaviour
                 _activeObject.createdFromPanel = false;
             }
             _history.Add(editAction);
-            _activeObject.controller.toolMode = ((ToolMode)0);
+            if (_activeObject.movableObjectType == MovableObjectType.Gravity)
+            {
+                _activeObject.GetComponent<SimulationObject>().enabled = true;
+                _activeObject.GetComponent<SimulationObject>().UpdateRest();
+            }
+            _activeObject.restTransform.copyFrom(_activeObject.transform);
+            _activeObject.controller.toolMode = 0;
             _activeObject = null;
         }
         else
@@ -174,5 +180,4 @@ public class MovableObjectManager : MonoBehaviour
     {
         _history = new History();
     }
-    
 }
